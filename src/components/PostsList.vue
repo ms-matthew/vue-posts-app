@@ -49,7 +49,6 @@ export default {
   },
 
   async created() {
-    // Pobierz dane przy inicjalizacji komponentu
     if (this.$store.state.posts.length === 0) {
       await Promise.all([
         this.$store.dispatch("fetchPosts"),
@@ -112,7 +111,6 @@ export default {
   margin-bottom: 40px;
 }
 
-/* Animacje dla listy postów */
 .post-list-enter-active,
 .post-list-leave-active {
   transition: all 0.5s ease;

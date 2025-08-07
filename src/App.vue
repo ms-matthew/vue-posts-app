@@ -32,13 +32,11 @@ button {
   font-family: inherit;
 }
 
-/* Globalne style dla przycisków */
 button:focus {
   outline: 2px solid #007bff;
   outline-offset: 2px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
