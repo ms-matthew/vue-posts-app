@@ -2,7 +2,6 @@
   <div class="home">
     <header class="page-header">
       <h1>Lista Postów</h1>
-      <p class="subtitle">Zarządzaj swoimi postami z łatwością</p>
     </header>
 
     <PostsList />
