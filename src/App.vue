@@ -1,30 +1,47 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+};
+</script>
+
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  min-height: 100vh;
 }
 
-nav {
-  padding: 30px;
+button {
+  font-family: inherit;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/* Globalne style dla przycisków */
+button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
 </style>

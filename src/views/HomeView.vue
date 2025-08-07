@@ -1,18 +1,58 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <header class="page-header">
+      <h1>Lista Postów</h1>
+      <p class="subtitle">Zarządzaj swoimi postami z łatwością</p>
+    </header>
+
+    <PostsList />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import PostsList from "@/components/PostsList.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    PostsList,
   },
 };
 </script>
+
+<style scoped>
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.page-header h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 15px;
+  }
+
+  .page-header h1 {
+    font-size: 2em;
+  }
+}
+</style>
